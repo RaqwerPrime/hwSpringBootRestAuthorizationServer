@@ -1,0 +1,89 @@
+# Compiled class files
+*.class
+!gradle/wrapper/gradle-wrapper.jar
+
+# Log files
+*.log
+logs/
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Build output
+build/
+target/
+out/
+bin/
+
+# IDE files
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Gradle
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot
+application.properties
+application-dev.properties
+application-prod.properties
+!src/main/resources/application.properties
+!src/main/resources/application-*.properties
+
+# Database
+*.db
+*.sqlite
+*.h2.db
+
+# Temp files
+*.tmp
+*.temp
+
+# Coverage reports
+jacoco.exec
+*.gcov
+*.lcov
+
+# Unit test reports
+TEST-*.xml
+
+# Docker
+docker-compose.override.yml
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
