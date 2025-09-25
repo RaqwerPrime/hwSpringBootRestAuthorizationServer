@@ -3,7 +3,7 @@ package ru.netology.hwspringbootrestauthorizationserver.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netology.hwspringbootrestauthorizationserver.Authorities;
+import ru.netology.hwspringbootrestauthorizationserver.service.Authorities;
 import ru.netology.hwspringbootrestauthorizationserver.service.AuthorizationService;
 
 import java.util.List;

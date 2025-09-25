@@ -1,7 +1,7 @@
 package ru.netology.hwspringbootrestauthorizationserver.repository;
 
 import org.springframework.stereotype.Repository;
-import ru.netology.hwspringbootrestauthorizationserver.Authorities;
+import ru.netology.hwspringbootrestauthorizationserver.service.Authorities;
 
 import java.util.Arrays;
 import java.util.Collections;
