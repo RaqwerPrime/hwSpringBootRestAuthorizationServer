@@ -1,9 +1,24 @@
 package ru.netology.hwspringbootrestauthorizationserver.service;
 
-public class AuthorizationService {
-    UserRepository userRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import ru.netology.hwspringbootrestauthorizationserver.Authorities;
+import ru.netology.hwspringbootrestauthorizationserver.exception.InvalidCredentials;
+import ru.netology.hwspringbootrestauthorizationserver.exception.UnauthorizedUser;
+import ru.netology.hwspringbootrestauthorizationserver.repository.UserRepository;
 
-    List<Authorities> getAuthorities(String user, String password) {
+import java.util.List;
+
+@Service
+public class AuthorizationService {
+
+    private final UserRepository userRepository;
+
+    public AuthorizationService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public List<Authorities> getAuthorities(String user, String password) {
         if (isEmpty(user) || isEmpty(password)) {
             throw new InvalidCredentials("User name or password is empty");
         }
