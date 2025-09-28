@@ -11,11 +11,15 @@ import java.util.List;
 @Repository
 public class UserRepository {
     public List<Authorities> getUserAuthorities(User user) {
-        if ("admin".equals(user) && "admin123".equals(user.getPassword())) {
+
+        String login = user.getLogin();
+        String password = user.getPassword();
+
+        if ("admin".equals(login) && "admin123".equals(user.getPassword())) {
             return Arrays.asList(Authorities.READ, Authorities.WRITE, Authorities.DELETE);
-        } else if ("user".equals(user) && "user123".equals(user.getPassword())) {
+        } else if ("user".equals(login) && "user123".equals(user.getPassword())) {
             return Arrays.asList(Authorities.READ, Authorities.WRITE);
-        } else if ("reader".equals(user) && "reader123".equals(user.getPassword())) {
+        } else if ("reader".equals(login) && "reader123".equals(user.getPassword())) {
             return Collections.singletonList(Authorities.READ);
         } else {
             return Collections.emptyList();
