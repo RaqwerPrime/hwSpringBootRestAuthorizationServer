@@ -1,0 +1,7 @@
+
+services:
+  webapp:
+    build: ./
+    container_name: "myappweb1"
+    ports:
+      - "8081:8080"
